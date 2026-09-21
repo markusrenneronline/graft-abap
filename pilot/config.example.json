@@ -1,0 +1,10 @@
+{
+  "repository": "C:/dev/mein-abap-export",
+  "graphDirectory": "graph",
+  "abapVersion": "7.50",
+  "upstream": {
+    "repository": "https://github.com/trailhq/Graft",
+    "commit": "f9e65396e638e517aecae0d731017f53084d70ed",
+    "version": "0.18.0"
+  }
+}

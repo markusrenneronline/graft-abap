@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "graft-abap": {
+      "type": "stdio",
+      "command": "C:/Program Files/nodejs/node.exe",
+      "args": ["C:/dev/graft-abap/pilot/run.mjs", "mcp"]
+    }
+  }
+}
