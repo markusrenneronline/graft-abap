@@ -108,6 +108,16 @@ test('source package ships the general skill but never client-local skill folder
   assert.ok(REQUIRED.includes('skill/graft-abap/SKILL.md'));
 });
 
+test('shipped README describes the ABAP pilot, upstream README ships under its own name', () => {
+  assert.equal(included('README.md'), true);
+  assert.equal(included('README-GRAFT.md'), true);
+  const readme = readFileSync(fileURLToPath(new URL('../README.md', import.meta.url)), 'utf8');
+  assert.match(readme, /INSTALL-ABAP\.md/);
+  assert.match(readme, /README-GRAFT\.md/);
+  // The upstream quick start installs the npm package without ABAP support and rewires agent configs.
+  for (const line of readme.split(/\r?\n/)) if (/npm install -g|npx @nanonets|graft init/.test(line)) assert.match(line, /nicht/i, line);
+});
+
 test('project-specific evaluation stays out of the source package', () => {
   assert.equal(included('pilot/evaluate-project.mjs'), false);
   assert.equal(included('pilot/evaluate-evidence.mjs'), true);

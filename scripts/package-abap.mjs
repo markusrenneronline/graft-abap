@@ -7,7 +7,7 @@ import { dirname, join, resolve, relative, isAbsolute, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const topFiles = new Set(['package.json', 'package-lock.json', 'tsconfig.json', '.gitignore', 'LICENSE', 'CREDITS.md',
-  'README.md', 'TELEMETRY.md', 'SECURITY.md', 'INSTALL-ABAP.md', 'ABAP-EXECUTION.md', 'ABAP-RETURN-CHAINS.md', 'ABAP-OBJECT-EXPRESSIONS.md', 'ABAP-DIAGNOSTICS.md', 'ABAP-BENEFIT-EVALUATION.md']);
+  'README.md', 'README-GRAFT.md', 'TELEMETRY.md', 'SECURITY.md', 'INSTALL-ABAP.md', 'ABAP-EXECUTION.md', 'ABAP-RETURN-CHAINS.md', 'ABAP-OBJECT-EXPRESSIONS.md', 'ABAP-DIAGNOSTICS.md', 'ABAP-BENEFIT-EVALUATION.md']);
 const pilotFiles = new Set(['pilot/run.mjs', 'pilot/doctor.mjs', 'pilot/evaluate-evidence.mjs', 'pilot/config.example.json', 'pilot/claude-mcp.example.json']);
 export const REQUIRED = ['package.json', 'package-lock.json', 'tsconfig.json', 'LICENSE', 'CREDITS.md', 'INSTALL-ABAP.md',
   'src/graph/abap.ts', 'viewer/tsconfig.json', 'scripts/build-viewer.mjs', 'scripts/package-abap.mjs', 'scripts/publish-abap.mjs', 'scripts/verify-abap-package.mjs',
