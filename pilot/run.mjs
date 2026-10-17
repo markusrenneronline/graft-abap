@@ -45,7 +45,7 @@ if (config.sourceState) {
     writeJsonAtomic(policyPath, policy);
   }
 }
-const pilotVersion = '0.18.0-abap-pilot.32';
+const pilotVersion = '0.18.0-abap-pilot.33';
 process.env.GRAFT_PILOT_VERSION = pilotVersion;
 const [command = 'help', ...args] = cliArgs;
 const help = `Graft ABAP Pilot — local sources, static analysis, no LLM
